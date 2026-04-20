@@ -103,12 +103,25 @@
 
     </section>
 
-    <h2 style="font-size:1.05em;color:#1e5c46;border-bottom:2px solid #2d7a5f;padding-bottom:8px;margin-bottom:24px;">全60記事一覧</h2>
+    <h2 style="font-size:1.05em;color:#1e5c46;border-bottom:2px solid #2d7a5f;padding-bottom:8px;margin-bottom:20px;">全60記事一覧</h2>
 
-    <div class="articles-grid">
+    <!-- ===== カテゴリフィルター ===== -->
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">すべて <span class="filter-badge" id="badge-all">60</span></button>
+      <button class="filter-btn" data-filter="施設選び">施設選び <span class="filter-badge"></span></button>
+      <button class="filter-btn" data-filter="費用・お金">費用・お金 <span class="filter-badge"></span></button>
+      <button class="filter-btn" data-filter="見学">見学 <span class="filter-badge"></span></button>
+      <button class="filter-btn" data-filter="介護用品">介護用品 <span class="filter-badge"></span></button>
+      <button class="filter-btn" data-filter="施設生活">施設生活 <span class="filter-badge"></span></button>
+      <button class="filter-btn" data-filter="在宅・住まい">在宅・住まい <span class="filter-badge"></span></button>
+      <button class="filter-btn" data-filter="介護の始まり">介護の始まり <span class="filter-badge"></span></button>
+    </div>
+    <p class="filter-result" id="filterResult"></p>
+
+    <div class="articles-grid" id="articlesGrid">
 
       <!-- 記事カード 60（最新） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設生活|介護の気持ち|家族">
         <div class="card-img"><img src="images/eyecatch-060.png" alt="静かに過ごす高齢の義母と見守る家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -128,7 +141,7 @@
       </article>
 
       <!-- 記事カード 59 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|施設生活|サ高住">
         <div class="card-img"><img src="images/eyecatch-059.png" alt="施設の共用スペースで入居者が交流するイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -148,7 +161,7 @@
       </article>
 
       <!-- 記事カード 58 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|施設の種類|施設探し">
         <div class="card-img"><img src="images/eyecatch-058.png" alt="施設の種類を図で整理している家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -168,7 +181,7 @@
       </article>
 
       <!-- 記事カード 57 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設生活|家族|デジタル">
         <div class="card-img"><img src="images/eyecatch-057.png" alt="タブレットでビデオ通話をする高齢女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -188,7 +201,7 @@
       </article>
 
       <!-- 記事カード 56 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="転倒・事故|介護の始まり|日常ケア">
         <div class="card-img"><img src="images/eyecatch-056.png" alt="歩き方の変化に気づく家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -208,7 +221,7 @@
       </article>
 
       <!-- 記事カード 55 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|部屋選び|入居">
         <div class="card-img"><img src="images/eyecatch-055.png" alt="施設の部屋の窓から外を見る家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -228,7 +241,7 @@
       </article>
 
       <!-- 記事カード 54 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|見学|日常ケア">
         <div class="card-img"><img src="images/eyecatch-054.png" alt="施設の廊下を歩く高齢者のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -248,7 +261,7 @@
       </article>
 
       <!-- 記事カード 53 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|見学|施設探し">
         <div class="card-img"><img src="images/eyecatch-053.png" alt="複数の施設を見学しながらメモを取る家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -268,7 +281,7 @@
       </article>
 
       <!-- 記事カード 52 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|見学|チェックリスト">
         <div class="card-img"><img src="images/eyecatch-052.png" alt="老人ホームの見学でメモを取る家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -288,7 +301,7 @@
       </article>
 
       <!-- 記事カード 51 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="介護用品|車椅子|日常ケア">
         <div class="card-img"><img src="images/eyecatch-051.png" alt="車椅子をチェックリストで確認する家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -308,7 +321,7 @@
       </article>
 
       <!-- 記事カード 50 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="日常ケア|食事|一人暮らし">
         <div class="card-img"><img src="images/eyecatch-050.png" alt="宅食の弁当を前に戸惑う高齢女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -328,7 +341,7 @@
       </article>
 
       <!-- 記事カード 49 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="介護の始まり|施設選び|地域包括支援センター">
         <div class="card-img"><img src="images/eyecatch-049.png" alt="地域包括支援センターで相談する女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -348,7 +361,7 @@
       </article>
 
       <!-- 記事カード 48 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|施設探し">
         <div class="card-img"><img src="images/eyecatch-048.png" alt="施設紹介会社の担当者と相談する家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -367,7 +380,7 @@
       </article>
 
       <!-- 記事カード 47 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|面会|日常ケア">
         <div class="card-img"><img src="images/eyecatch-047.png" alt="車椅子の義母と散歩する家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -387,7 +400,7 @@
       </article>
 
       <!-- 記事カード 46 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|入居準備|契約">
         <div class="card-img"><img src="images/eyecatch-046.png" alt="契約書を前に考え込む女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -407,7 +420,7 @@
       </article>
 
       <!-- 記事カード 45 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|入居準備|持ち物">
         <div class="card-img"><img src="images/eyecatch-045.png" alt="施設の部屋に家具を運び込む準備をする女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -427,7 +440,7 @@
       </article>
 
       <!-- 記事カード 44 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="医療・介護費用|確定申告・医療費控除|お金の話">
         <div class="card-img"><img src="images/eyecatch-044.png" alt="確定申告書と通帳を前にほっとした表情の女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -447,7 +460,7 @@
       </article>
 
       <!-- 記事カード 43 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="お金の話|施設選び|介護の始まり">
         <div class="card-img"><img src="images/eyecatch-043.png" alt="売却済みの看板が立つ一軒家の前で考える女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -467,7 +480,7 @@
       </article>
 
       <!-- 記事カード 42 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="医療・介護費用|介護保険|お金の話">
         <div class="card-img"><img src="images/eyecatch-042.png" alt="支給決定通知書と通帳を前に驚く女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -487,7 +500,7 @@
       </article>
 
       <!-- 記事カード 41 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|老健|ココファン">
         <div class="card-img"><img src="images/eyecatch-041.png" alt="老人ホームの入り口を前に立つ女性と高齢女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -507,7 +520,7 @@
       </article>
 
       <!-- 記事カード 40 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="在宅介護|食事・宅食|ホームヘルパー">
         <div class="card-img"><img src="images/eyecatch-040.png" alt="テーブルに白いご飯だけが置かれた食卓で一人座る高齢女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -527,7 +540,7 @@
       </article>
 
       <!-- 記事カード 39 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="在宅介護|食事・宅食|一人暮らし">
         <div class="card-img"><img src="images/eyecatch-039.png" alt="マンションの食卓で宅配弁当を前に座る高齢女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -547,7 +560,7 @@
       </article>
 
       <!-- 記事カード 38 -->
-      <article class="article-card">
+      <article class="article-card" data-tags="医療・介護費用|確定申告|扶養控除">
         <div class="card-img"><img src="images/eyecatch-038.png" alt="確定申告の書類と領収書の束を前に考える女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -567,7 +580,7 @@
       </article>
 
       <!-- 記事カード 37（5/4） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設生活|iPad・格安SIM|家族のつながり">
         <div class="card-img"><img src="images/eyecatch-037.png" alt="施設の部屋でiPadでビデオ通話をする高齢女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -587,7 +600,7 @@
       </article>
 
       <!-- 記事カード 36（5/3） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="医療・介護費用|入院・手術|老健">
         <div class="card-img"><img src="images/eyecatch-036.png" alt="病院のベッドに横たわる高齢女性と付き添う家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -607,7 +620,7 @@
       </article>
 
       <!-- 記事カード 35（5/2） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設生活|医療・介護費用|訪問医療">
         <div class="card-img"><img src="images/eyecatch-035.png" alt="施設に往診に来た医師をスタッフが出迎えるイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -627,7 +640,7 @@
       </article>
 
       <!-- 記事カード 34（5/1） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設生活|家族の気持ち|面会">
         <div class="card-img"><img src="images/eyecatch-034.png" alt="施設の外を車椅子で散歩する高齢女性と付き添う女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -647,7 +660,7 @@
       </article>
 
       <!-- 記事カード 33（4/30） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="介護用品|施設移転|体験談">
         <div class="card-img"><img src="images/eyecatch-033.png" alt="施設の部屋に置かれた介護チェアに家族が座っているイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -667,7 +680,7 @@
       </article>
 
       <!-- 記事カード 32（4/29） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設見学|施設選び|食事・食器">
         <div class="card-img"><img src="images/eyecatch-032.png" alt="老人ホームの食堂で陶器の食器を使う高齢者のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -687,7 +700,7 @@
       </article>
 
       <!-- 記事カード 31（4/28） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="ココファン|サ高住|特定施設|デイサービス">
         <div class="card-img"><img src="images/eyecatch-031.png" alt="施設のロビーでお迎えを待つ高齢者たちのイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -708,7 +721,7 @@
       </article>
 
       <!-- 記事カード 30（4/27） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="ココファン|施設の良さ|早めの入居">
         <div class="card-img"><img src="images/eyecatch-030.png" alt="施設の玄関で笑顔で外出する高齢者のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -728,7 +741,7 @@
       </article>
 
       <!-- 記事カード 29（4/26） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="地域包括支援センター|デイサービス|ホームヘルパー">
         <div class="card-img"><img src="images/eyecatch-029.png" alt="地域包括支援センターで相談する女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -748,7 +761,7 @@
       </article>
 
       <!-- 記事カード 28（4/25） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設への決断|転倒|葛藤と後悔">
         <div class="card-img"><img src="images/eyecatch-028.png" alt="廊下をすり足で歩く高齢者を見守る家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -768,7 +781,7 @@
       </article>
 
       <!-- 記事カード 27（4/24） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="デイサービス|機能訓練|後悔と学び">
         <div class="card-img"><img src="images/eyecatch-027.png" alt="デイサービスで運動する高齢者のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -788,7 +801,7 @@
       </article>
 
       <!-- 記事カード 26（4/23） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設費用|ココファン|お金の話">
         <div class="card-img"><img src="images/eyecatch-026.png" alt="施設費用の明細を見る家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -808,7 +821,7 @@
       </article>
 
       <!-- 記事カード 25（4/22） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="ココファン|サ高住|特定施設">
         <div class="card-img"><img src="images/eyecatch-025.png" alt="施設の説明を受ける家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -828,7 +841,7 @@
       </article>
 
       <!-- 記事カード 24（4/21） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="車椅子|福祉用具|介護グッズ">
         <div class="card-img"><img src="images/eyecatch-024.png" alt="車椅子を押す家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -848,7 +861,7 @@
       </article>
 
       <!-- 記事カード 23（4/20） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="ケアマネ|介護相談|家族の関わり方">
         <div class="card-img"><img src="images/eyecatch-023.png" alt="ケアマネジャーと家族が話し合うイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -868,7 +881,7 @@
       </article>
 
       <!-- 記事カード 22（4/19） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設スタッフ|ココファン|施設の雰囲気">
         <div class="card-img"><img src="images/eyecatch-022.png" alt="施設スタッフが高齢者に寄り添うイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -888,7 +901,7 @@
       </article>
 
       <!-- 記事カード 21（4/18） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="認知症|家族信託|お金の管理">
         <div class="card-img"><img src="images/eyecatch-021.png" alt="家族で話し合うイラスト、認知症と家族信託"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -908,7 +921,7 @@
       </article>
 
       <!-- 記事カード 20（4/17） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="介護食|嚥下|施設生活">
         <div class="card-img"><img src="images/eyecatch-020.png" alt="食事をサポートされる高齢女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -928,7 +941,7 @@
       </article>
 
       <!-- 記事カード 19（4/16） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="見守り|一人暮らし|安心">
         <div class="card-img"><img src="images/eyecatch-019.png" alt="スマートフォンで高齢者の様子を見守る家族のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -948,7 +961,7 @@
       </article>
 
       <!-- 記事カード 18（4/15） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="訪問マッサージ|身体機能維持|費用">
         <div class="card-img"><img src="images/eyecatch-018.png" alt="施設の居室で訪問マッサージを受ける高齢女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -968,7 +981,7 @@
       </article>
 
       <!-- 記事カード 17（4/14） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|費用比較|見学">
         <div class="card-img"><img src="images/eyecatch-017.png" alt="夫婦で施設パンフレットを見比べるイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -988,7 +1001,7 @@
       </article>
 
       <!-- 記事カード 16（4/13） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="義父の話|施設探し|胆嚢癌">
         <div class="card-img"><img src="images/eyecatch-016.png" alt="施設探しが間に合わなかった場面のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1008,7 +1021,7 @@
       </article>
 
       <!-- 記事カード 15（4/12） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="介護用品|杖・歩行補助|義父の話">
         <div class="card-img"><img src="images/eyecatch-015.png" alt="4点杖で廊下を歩く男性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1028,7 +1041,7 @@
       </article>
 
       <!-- 記事カード 14（4/12） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="介護用品|介護シューズ|義父の話">
         <div class="card-img"><img src="images/eyecatch-014.png" alt="介護シューズを履かせてあげるイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1048,7 +1061,7 @@
       </article>
 
       <!-- 記事カード 13（4/11） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|施設見学|車椅子">
         <div class="card-img"><img src="images/eyecatch-013.png" alt="介護施設のバリアフリートイレのイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1068,7 +1081,7 @@
       </article>
 
       <!-- 記事カード 12（4/11） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|老健|体験談">
         <div class="card-img"><img src="images/eyecatch-012.png" alt="老人ホームへ入所するイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1088,7 +1101,7 @@
       </article>
 
       <!-- 記事カード 11（4/10） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="介護の始まり|入院・手術|老健">
         <div class="card-img"><img src="images/eyecatch-011.png" alt="転倒事故・頸椎手術のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1108,7 +1121,7 @@
       </article>
 
       <!-- 記事カード 10（4/10） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="介護用品|車椅子|在宅介護">
         <div class="card-img"><img src="images/eyecatch-010.png" alt="室内用車椅子のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1128,7 +1141,7 @@
       </article>
 
       <!-- 記事カード 9（4/9） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="住まい|住み替え|老後の備え">
         <div class="card-img"><img src="images/eyecatch-009.png" alt="手すりを使って歩く女性のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1148,7 +1161,7 @@
       </article>
 
       <!-- 記事カード 8（4/9） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="相談窓口|ケアマネ|デイサービス">
         <div class="card-img"><img src="images/eyecatch-008.png" alt="区役所での介護相談イラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1168,7 +1181,7 @@
       </article>
 
       <!-- 記事カード 7（4/8） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="在宅介護|住まいの工夫|介護の考え方">
         <div class="card-img"><img src="images/eyecatch-007.png" alt="101歳の祖母と孫の団欒イラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1188,7 +1201,7 @@
       </article>
 
       <!-- 記事カード 6（4/7） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="住まい|住み替え|老後の備え">
         <div class="card-img"><img src="images/eyecatch-006.png" alt="立ち上がり・移乗の介助イラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1208,7 +1221,7 @@
       </article>
 
       <!-- 記事カード 5（4/2） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="闘病・看取り|介護の始まり|施設選び">
         <div class="card-img"><img src="images/eyecatch-005.png" alt="介護が急に現実になった場面のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1228,7 +1241,7 @@
       </article>
 
       <!-- 記事カード 4（3/26） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="住まい|住み替え|老後の備え">
         <div class="card-img"><img src="images/eyecatch-004.png" alt="住み替えのイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1248,7 +1261,7 @@
       </article>
 
       <!-- 記事カード 3（3/19） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="仕事と介護|転職|働き方">
         <div class="card-img"><img src="images/eyecatch-003.png" alt="仕事と介護の両立のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1268,7 +1281,7 @@
       </article>
 
       <!-- 記事カード 2（3/12） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設見学|チェックリスト|施設選び">
         <div class="card-img"><img src="images/eyecatch-002.png" alt="介護施設見学のイラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1288,7 +1301,7 @@
       </article>
 
       <!-- 記事カード 1（3/5） -->
-      <article class="article-card">
+      <article class="article-card" data-tags="施設選び|費用|特養">
         <div class="card-img"><img src="images/eyecatch-001.png" alt="介護施設の外観イラスト"></div>
         <div class="card-body">
           <div class="card-meta">
@@ -1389,12 +1402,14 @@
     <div class="widget">
       <div class="widget-header">カテゴリ</div>
       <div class="widget-body">
-        <ul class="category-list">
-          <li><a href="#">施設選び <span class="category-count">2</span></a></li>
-          <li><a href="#">費用・お金 <span class="category-count">1</span></a></li>
-          <li><a href="#">見学・手続き <span class="category-count">1</span></a></li>
-          <li><a href="#">特養・公的施設 <span class="category-count">1</span></a></li>
-          <li><a href="#">介護保険 <span class="category-count">0</span></a></li>
+        <ul class="category-list" id="sidebarCatList">
+          <li><a href="#" data-filter="施設選び">施設選び <span class="category-count" id="sc-施設選び">-</span></a></li>
+          <li><a href="#" data-filter="費用・お金">費用・お金 <span class="category-count" id="sc-費用・お金">-</span></a></li>
+          <li><a href="#" data-filter="見学">見学 <span class="category-count" id="sc-見学">-</span></a></li>
+          <li><a href="#" data-filter="介護用品">介護用品 <span class="category-count" id="sc-介護用品">-</span></a></li>
+          <li><a href="#" data-filter="施設生活">施設生活 <span class="category-count" id="sc-施設生活">-</span></a></li>
+          <li><a href="#" data-filter="在宅・住まい">在宅・住まい <span class="category-count" id="sc-在宅・住まい">-</span></a></li>
+          <li><a href="#" data-filter="介護の始まり">介護の始まり <span class="category-count" id="sc-介護の始まり">-</span></a></li>
         </ul>
       </div>
     </div>
@@ -1438,10 +1453,10 @@
       <div class="footer-section">
         <h4>カテゴリ</h4>
         <ul>
-          <li><a href="#">施設選び</a></li>
-          <li><a href="#">費用・お金</a></li>
-          <li><a href="#">見学・手続き</a></li>
-          <li><a href="#">介護保険</a></li>
+          <li><a href="#" data-filter="施設選び">施設選び</a></li>
+          <li><a href="#" data-filter="費用・お金">費用・お金</a></li>
+          <li><a href="#" data-filter="見学">見学</a></li>
+          <li><a href="#" data-filter="介護用品">介護用品</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -1476,6 +1491,81 @@
   #scrollTop.visible { opacity: 1; pointer-events: auto; }
 </style>
 
+<script>
+/* ===== カテゴリフィルター ===== */
+(function () {
+  // カテゴリ → 対応タグのマッピング
+  const FILTER_MAP = {
+    '施設選び':   ['施設選び','施設探し','施設見学','見学','施設の種類','チェックリスト','施設への決断','早めの入居','入居準備','入居','契約','連帯保証人','持ち物'],
+    '費用・お金': ['医療・介護費用','お金の話','費用','費用比較','施設費用','確定申告','確定申告・医療費控除','家族信託','扶養控除','お金の管理'],
+    '見学':       ['見学','施設見学','チェックリスト','施設の雰囲気','施設スタッフ'],
+    '介護用品':   ['介護用品','車椅子','介護シューズ','介護グッズ','杖・歩行補助','福祉用具','介護シューズ'],
+    '施設生活':   ['施設生活','面会','デジタル','iPad・格安SIM','機能訓練','身体機能維持','食事・宅食','介護食','食事','食事・食器','嚥下'],
+    '在宅・住まい':['住まい','住み替え','在宅介護','老後の備え','一人暮らし','住まいの工夫','ホームヘルパー','デイサービス','訪問医療','訪問マッサージ'],
+    '介護の始まり':['介護の始まり','転倒・事故','転倒','入院・手術','介護相談','地域包括支援センター','ケアマネ','相談窓口','認知症'],
+  };
+
+  const cards = Array.from(document.querySelectorAll('.article-card'));
+  const buttons = Array.from(document.querySelectorAll('.filter-btn'));
+  const resultEl = document.getElementById('filterResult');
+
+  // 件数を事前計算してバッジに反映
+  buttons.forEach(btn => {
+    const f = btn.dataset.filter;
+    if (f === 'all') return;
+    const targets = FILTER_MAP[f] || [f];
+    const count = cards.filter(c => {
+      const tags = c.dataset.tags ? c.dataset.tags.split('|') : [];
+      return tags.some(t => targets.includes(t));
+    }).length;
+    const badge = btn.querySelector('.filter-badge');
+    if (badge) badge.textContent = count;
+    // サイドバーカウントも更新
+    const sc = document.getElementById('sc-' + f);
+    if (sc) sc.textContent = count;
+  });
+
+  function applyFilter(filter) {
+    let shown = 0;
+    const targets = filter === 'all' ? null : (FILTER_MAP[filter] || [filter]);
+    cards.forEach(card => {
+      const tags = card.dataset.tags ? card.dataset.tags.split('|') : [];
+      const match = filter === 'all' || tags.some(t => targets.includes(t));
+      card.classList.toggle('hidden', !match);
+      if (match) shown++;
+    });
+    if (filter === 'all') {
+      resultEl.style.display = 'none';
+    } else {
+      resultEl.style.display = 'block';
+      resultEl.textContent = '「' + filter + '」の記事を ' + shown + ' 件表示しています';
+    }
+  }
+
+  // フィルターボタン クリック
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      buttons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      applyFilter(this.dataset.filter);
+    });
+  });
+
+  // サイドバー・フッターのカテゴリリンク
+  document.querySelectorAll('[data-filter]').forEach(el => {
+    if (el.classList.contains('filter-btn')) return; // 重複登録しない
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const f = this.dataset.filter;
+      const btn = document.querySelector('.filter-btn[data-filter="' + f + '"]');
+      if (btn) {
+        btn.click();
+        document.getElementById('filterBar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

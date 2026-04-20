@@ -784,3 +784,55 @@ ul, ol {
     white-space: nowrap;
   }
 }
+
+/* ===== カテゴリフィルター ===== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.filter-btn {
+  padding: 7px 16px;
+  border-radius: 20px;
+  border: 2px solid #2d7a5f;
+  background: #fff;
+  color: #2d7a5f;
+  font-size: 0.86em;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  font-weight: 600;
+  line-height: 1;
+}
+.filter-btn:hover {
+  background: #e8f5f0;
+}
+.filter-btn.active {
+  background: #2d7a5f;
+  color: #fff;
+}
+.filter-badge {
+  display: inline-block;
+  background: rgba(45,122,95,0.15);
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-size: 0.82em;
+  margin-left: 4px;
+  font-weight: 500;
+}
+.filter-btn.active .filter-badge {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+}
+.filter-result {
+  font-size: 0.88em;
+  color: #555;
+  margin: -8px 0 16px;
+  padding: 6px 12px;
+  background: #f0f8f4;
+  border-radius: 6px;
+  display: none;
+}
+.article-card.hidden {
+  display: none !important;
+}
