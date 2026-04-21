@@ -574,14 +574,16 @@ ul, ol {
 }
 
 /* 表 */
-.post-content table {
+.post-content table,
+.post-body table {
   width: 100%;
   border-collapse: collapse;
   margin: 24px 0;
   font-size: 0.9rem;
 }
 
-.post-content th {
+.post-content th,
+.post-body th {
   background: var(--color-main);
   color: var(--color-white);
   padding: 10px 14px;
@@ -589,14 +591,25 @@ ul, ol {
   font-weight: 500;
 }
 
-.post-content td {
+.post-content td,
+.post-body td {
   padding: 10px 14px;
   border-bottom: 1px solid var(--color-border);
   vertical-align: top;
 }
 
-.post-content tr:nth-child(even) td {
+.post-content tr:nth-child(even) td,
+.post-body tr:nth-child(even) td {
   background: var(--color-accent);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 24px 0;
+}
+.table-wrap table {
+  margin: 0;
+  min-width: 480px;
 }
 
 /* ポイントボックス */
@@ -629,6 +642,49 @@ ul, ol {
   color: #c0622a;
   margin-bottom: 8px;
   font-size: 0.95rem;
+}
+
+/* FAQ */
+.faq-box {
+  margin: 32px 0;
+}
+.faq-item {
+  border-bottom: 1px solid #e0ede8;
+  padding: 14px 0;
+}
+.faq-item:last-child {
+  border-bottom: none;
+}
+.faq-q {
+  font-weight: bold;
+  color: #1e5c46;
+  margin: 0 0 6px;
+  padding-left: 28px;
+  position: relative;
+  line-height: 1.6;
+}
+.faq-q::before {
+  content: "Q";
+  position: absolute;
+  left: 0;
+  color: #2d7a5f;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+.faq-a {
+  margin: 0;
+  padding-left: 28px;
+  color: #444;
+  line-height: 1.75;
+  position: relative;
+}
+.faq-a::before {
+  content: "A";
+  position: absolute;
+  left: 0;
+  color: #888;
+  font-weight: bold;
+  font-size: 1.05em;
 }
 
 /* 記事フッター */
@@ -778,7 +834,8 @@ ul, ol {
     gap: 24px;
   }
 
-  .post-content table {
+  .post-content table,
+  .post-body table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
