@@ -644,6 +644,56 @@ ul, ol {
   font-size: 0.95rem;
 }
 
+/* 内部CTA */
+.cta-next {
+  background: #eef8f3;
+  border-top: 3px solid #2d7a5f;
+  border-radius: 0 0 12px 12px;
+  padding: 20px 20px 16px;
+  margin: 32px 0;
+}
+.cta-next-title {
+  font-size: 0.92rem;
+  font-weight: bold;
+  color: #1e5c46;
+  margin: 0 0 12px;
+  letter-spacing: 0.02em;
+}
+.cta-next ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cta-next a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid #c3e3d4;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #1a5438;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1.4;
+  transition: background 0.15s, border-color 0.15s;
+}
+.cta-next a::after {
+  content: "→";
+  flex-shrink: 0;
+  margin-left: 10px;
+  color: #2d7a5f;
+  font-size: 1rem;
+}
+.cta-next a:hover {
+  background: #ddf0e8;
+  border-color: #2d7a5f;
+}
+
 /* FAQ */
 .faq-box {
   margin: 32px 0;
